@@ -1,1 +1,1 @@
-# Yan_2023010530_Aula_Pr-tica-DCC704
+# Yan_2023010530_Aula_Pratica-DCC704
