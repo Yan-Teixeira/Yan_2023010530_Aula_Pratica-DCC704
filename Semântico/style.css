@@ -1,0 +1,444 @@
+/* Variáveis para padronizar as cores do site[cite: 3] */
+:root {
+    --cor-primaria: #616e2b; /* Verde oliva escuro[cite: 3] */
+    --cor-destaque: #E8AF3B; /* Amarelo da borda e botão */
+    --cor-fundo-claro: #F9F9F9;
+    --cor-texto-escuro: #333333;
+    --cor-texto-claro: #FFFFFF;
+    --sombra-card: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra difusa[cite: 3] */
+    --fonte-titulos: 'Georgia', 'Times New Roman', serif;
+    --fonte-textos: 'Open Sans', 'Arial', sans-serif;
+}
+.oculta {
+    display: none !important;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-textos);
+    background-color: var(--cor-fundo-claro);
+    color: var(--cor-texto-escuro);
+    line-height: 1.6;
+}
+
+
+.fundo-verde {
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-claro);
+    padding-bottom: 80px; 
+    padding-top: 10px; /* Espaço entre o topo e o conteúdo */
+}
+
+.topo-container {
+    display: flex;
+    justify-content: space-between; /* Afasta o logo do menu[cite: 9] */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 40px;
+}
+
+.logo {
+    font-family: var(--fonte-titulos);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: var(--cor-texto-claro);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    transition: all 0.3s;
+}
+
+/* Efeito no link do menu ativo e ao passar o mouse */
+.menu a.ativo, .menu a:hover {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    max-width: 1000px;
+    margin: 20px auto 0 auto;
+    padding: 0 20px;
+}
+
+.hero-imagem img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%; /* Torna a foto perfeitamente redonda */
+    border: 4px solid var(--cor-destaque);
+    object-fit: cover;
+}
+
+.hero-texto {
+    max-width: 500px;
+}
+
+.boas-vindas {
+    color: var(--cor-destaque);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.hero-texto h1 {
+    font-family: var(--fonte-titulos);
+    font-size: 46px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-texto p {
+    font-size: 16px;
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+
+/* Botões do topo */
+.botoes {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-primario {
+    background-color: var(--cor-destaque);
+    color: #222;
+    border: none;
+    padding: 12px 24px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+
+
+.btn-primario:hover {
+    transform: translateY(-2px);
+}
+
+.btn-secundario {
+    background-color: transparent;
+    color: var(--cor-texto-claro);
+    border: 1px solid var(--cor-texto-claro);
+    padding: 12px 24px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-secundario:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.conteudo-principal {
+    display: flex; /* Coloca a seção de texto e a lateral lado a lado[cite: 3] */
+    gap: 30px;
+    max-width: 1100px;
+    margin: -40px auto 50px auto; /* A margem negativa sobe a caixa branca sobre o fundo verde */
+    padding: 0 20px;
+    align-items: flex-start;
+}
+
+/* Caixa principal (Esquerda) */
+.secao-sobre {
+    flex: 2; /* Ocupa o dobro do espaço da barra lateral */
+    background-color: #FFFFFF;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: var(--sombra-card);
+}
+
+.data-publicacao {
+    font-size: 11px;
+    font-weight: bold;
+    color: #888;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.secao-sobre h2 {
+    font-family: var(--fonte-titulos);
+    font-size: 28px;
+    color: #111;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #EEEEEE;
+    padding-bottom: 10px;
+}
+
+.secao-sobre p {
+    margin-bottom: 20px;
+    color: #555;
+    text-align: justify;
+}
+
+.btn-acao-escura {
+    background-color: #9C7210;
+    color: #FFF;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Barra Lateral (Direita) */
+.barra-lateral {
+    flex: 1; /* Ocupa espaço menor na tela */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    background-color: #FFFFFF;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: var(--sombra-card);
+}
+
+.card h3 {
+    font-family: var(--fonte-titulos);
+    font-size: 18px;
+    color: #111;
+    margin-bottom: 20px;
+}
+
+.lista-links {
+    list-style: none;
+}
+
+.lista-links li {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #EEEEEE;
+    padding-bottom: 10px;
+}
+
+.lista-links a {
+    text-decoration: none;
+    color: #3182ce;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.lista-links a:hover {
+    color: #2b6cb0;
+    text-decoration: underline;
+}
+
+/* Card menor de curiosidade */
+.card-destaque {
+    background-color: #F8F9FA;
+    border-left: 4px solid var(--cor-primaria); /* Detalhe lateral verde */
+}
+
+.sabia-que {
+    font-size: 11px;
+    font-weight: bold;
+    color: #888;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* ========================================================
+   ESTILOS GERAIS PARA AS NOVAS PÁGINAS (PÁG 2 E 3)
+   ======================================================== */
+.secao-clara {
+    background-color: #Fdfcf8; /* Fundo creme super claro igual da imagem */
+    padding: 60px 20px;
+    min-height: 100vh;
+}
+
+.cabecalho-secao {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.subtitulo-secao {
+    display: block;
+    color: #9C7210;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-family: var(--fonte-textos), sans-serif;
+}
+
+.cabecalho-secao h2 {
+    font-family: var(--fonte-titulos), serif;
+    font-size: 38px;
+    color: #111;
+    margin: 0 auto 15px auto;
+    max-width: 600px;
+    line-height: 1.2;
+}
+
+.cabecalho-secao p {
+    color: #666;
+    font-size: 16px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    max-width: 500px;
+}
+
+/* ========================================================
+   PÁGINA 2: LINHA DO TEMPO (TRAJETÓRIA)
+   ======================================================== */
+.linha-do-tempo {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    padding: 20px 0;
+}
+
+/* A linha vertical do meio */
+.linha-do-tempo::before {
+    content: '';
+    position: absolute;
+    left: 45px; /* Posição exata do centro dos ícones */
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #E6E0D4;
+}
+
+.item-timeline {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.icone-timeline {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid #E6E0D4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    z-index: 2; /* Garante que o ícone fique por cima da linha */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    margin-left: 20px;
+}
+
+.conteudo-timeline {
+    background-color: #fff;
+    padding: 25px 35px;
+    border-radius: 12px;
+    flex: 1;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+}
+
+.ano-timeline {
+    color: #B5852A;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.conteudo-timeline h3 {
+    margin: 5px 0 10px 0;
+    padding: 0;
+    font-size: 20px;
+    color: #222;
+}
+
+/* Neutraliza os estilos globais de parágrafo apenas aqui dentro */
+.conteudo-timeline p {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* ========================================================
+   PÁGINA 3: GRID DE CURIOSIDADES
+   ======================================================== */
+.grid-curiosidades {
+    display: flex; /* Organiza os cards flexivelmente[cite: 12] */
+    flex-wrap: wrap;
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.card-curiosidade {
+    flex: 1 1 300px; /* Cresce e encolhe, base de 300px */
+    padding: 30px;
+    border-radius: 16px;
+    background-color: #fff;
+    border: 1px solid #eee;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-curiosidade:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.icone-curiosidade {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.card-curiosidade h3 {
+    margin: 0 0 15px 0;
+    padding: 0;
+    font-size: 20px;
+    color: #111;
+}
+
+/* Neutraliza estilos globais de p */
+.card-curiosidade p {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Cores de fundo e borda suaves baseadas na imagem */
+.card-curiosidade.verde { background-color: #F6F9F6; border-color: #E2EFE2; }
+.card-curiosidade.laranja { background-color: #FFF8F0; border-color: #FDE8D4; }
+.card-curiosidade.rosa { background-color: #FFF4F6; border-color: #FCE1E6; }
+.card-curiosidade.vermelho { background-color: #FFF6F4; border-color: #FBE5E1; }
+.card-curiosidade.cinza { background-color: #F7F9F7; border-color: #EAEFEA; }
+.card-curiosidade.roxo { background-color: #F8F6FF; border-color: #EBE5FF; }

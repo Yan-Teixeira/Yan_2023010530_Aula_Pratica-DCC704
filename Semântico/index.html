@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog Yan Teixeira</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <!-- 1. CABEÇALHO FIXO: Fica de fora das páginas para nunca sumir da tela -->
+    <header class="fundo-verde" style="padding-bottom: 0;">
+        <div class="topo-container">
+            <div class="logo">Yan Teixeira</div>
+            <nav class="menu">
+                <a href="#inicio" onclick="trocarPagina('inicio')">Início</a>
+                <a href="#trajetoria" onclick="trocarPagina('trajetoria')">Trajetória</a>
+                <a href="#curiosidades" onclick="trocarPagina('curiosidades')">Curiosidades</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 2. PÁGINA 1: INÍCIO (Toda a apresentação agora está agrupada aqui) -->
+    <div id="inicio" class="pagina-conteudo">
+        <div class="fundo-verde">
+            <section class="hero-container">
+                <div class="hero-imagem">
+                    <img src="src/Yan.jpg" alt="Foto de Yan Teixeira">
+                </div>
+                <div class="hero-texto">
+                    <span class="boas-vindas">BEM-VINDO AO MEU ESPAÇO</span>
+                    <h1>Olá, eu sou o<br>Yan Teixeira!</h1>
+                    <p>Estudante de Ciência da Computação, apaixonado por tecnologia, robótica e café.</p>
+                    
+                    <div class="botoes">
+                        <button class="btn-primario" onclick="trocarPagina('trajetoria')">Ver minha trajetória →</button>
+                        <button class="btn-secundario" onclick="trocarPagina('curiosidades')">Curiosidades sobre mim</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <main class="conteudo-principal">
+            <article class="secao-sobre">
+                <span class="data-publicacao">PUBLICADO EM 05/09/2026 POR YAN</span>
+                <h2>Sobre mim</h2>
+                <p>Sou estudante de Ciência da Computação no 7º semestre, com experiência em desenvolvimento web — principalmente em HTML, CSS e JavaScript. Estou sempre buscando aprender novas tecnologias e aprimorar minhas habilidades em desenvolvimento de software.</p>
+                <p>Também estudo robótica e participo de um projeto na faculdade, onde aprendo sobre programação de microcontroladores e integração de sensores. Além disso, me interesso por inteligência artificial e estou explorando conceitos de aprendizado de máquina e redes neurais.</p>
+                <button class="btn-acao-escura">Clique para saber mais ✦</button>
+            </article>
+
+            <aside class="barra-lateral">
+                <div class="card">
+                    <h3>Artigos Recomendados</h3>
+                    <ul class="lista-links">
+                        <li><a href="#">Como organizar o CSS do seu projeto</a></li>
+                        <li><a href="#">A tríade da Web: HTML, CSS e JS</a></li>
+                        <li><a href="#">Introdução a microcontroladores</a></li>
+                        <li><a href="#">Machine Learning para iniciantes</a></li>
+                    </ul>
+                </div>
+                
+                <div class="card card-destaque">
+                    <span class="sabia-que">SABIA QUE...</span>
+                    <p>Yan usa analogias de animes para ensinar programação. 🍥</p>
+                </div>
+            </aside>
+        </main>
+    </div>
+    
+    <!-- PÁGINA 2: TRAJETÓRIA -->
+    <section id="trajetoria" class="pagina-conteudo oculta secao-clara">
+        <div class="cabecalho-secao">
+            <span class="subtitulo-secao">MINHA HISTÓRIA</span>
+            <h2>Trajetória Acadêmica<br>e Profissional</h2>
+            <p>Uma jornada construída com curiosidade, dedicação e muito código.</p>
+        </div>
+
+        <div class="linha-do-tempo">
+            <!-- Item 1 -->
+            <div class="item-timeline">
+                <div class="icone-timeline">🎓</div>
+                <div class="conteudo-timeline">
+                    <span class="ano-timeline">2023</span>
+                    <h3>Início na Computação</h3>
+                    <p>Ingressei no curso de Ciência da Computação e tive meu primeiro contato com lógica de programação e algoritmos.</p>
+                </div>
+            </div>
+            <!-- Item 2 -->
+            <div class="item-timeline">
+                <div class="icone-timeline">💻</div>
+                <div class="conteudo-timeline">
+                    <span class="ano-timeline">2024</span>
+                    <h3>Desenvolvimento Web</h3>
+                    <p>Aprofundei estudos em HTML, CSS e JavaScript, construindo projetos pessoais e entendendo a tríade da web moderna.</p>
+                </div>
+            </div>
+            <!-- Item 3 -->
+            <div class="item-timeline">
+                <div class="icone-timeline">🤖</div>
+                <div class="conteudo-timeline">
+                    <span class="ano-timeline">2026</span>
+                    <h3>Projeto de Robótica</h3>
+                    <p>Entrei para um projeto de robótica na faculdade, aprendendo sobre microcontroladores e integração de sensores físicos.</p>
+                </div>
+            </div>
+            <!-- Item 4 -->
+            <div class="item-timeline">
+                <div class="icone-timeline">🧠</div>
+                <div class="conteudo-timeline">
+                    <span class="ano-timeline">2026</span>
+                    <h3>Inteligência Artificial</h3>
+                    <p>Explorando conceitos de aprendizado de máquina e redes neurais aplicadas a problemas reais.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PÁGINA 3: CURIOSIDADES -->
+    <section id="curiosidades" class="pagina-conteudo oculta secao-clara">
+        <div class="cabecalho-secao">
+            <span class="subtitulo-secao">ALÉM DO CÓDIGO</span>
+            <h2>Curiosidades sobre Mim</h2>
+            
+        </div>
+
+        <div class="grid-curiosidades">
+            <div class="card-curiosidade verde">
+                <div class="icone-curiosidade">🎮</div>
+                <h3>Gamer de coração</h3>
+                <p>Apaixonado por videogames retrô e modernos — de Super Mario a RPGs modernos, sou fã de qualquer era do gaming. Meu jogo favorito é Dark souls 3.</p>
+            </div>
+            
+            <div class="card-curiosidade laranja">
+                <div class="icone-curiosidade">🥋</div>
+                <h3>Esportes</h3>
+                <p>Pratiquei Karate por 5 anos e handebol por 2 anos. Disputei alguns campeonatos estaduais de ambos os esportes.</p>
+            </div>
+            
+            <div class="card-curiosidade rosa">
+                <div class="icone-curiosidade">🌸</div>
+                <h3>Animes</h3>
+                <p>Gosto bastante de animes. Meu favorito é Bleach</p>
+            </div>
+            
+            <div class="card-curiosidade vermelho">
+                <div class="icone-curiosidade">🍖</div>
+                <h3>Churrasco em família</h3>
+                <p>Não recuso um bom churrasco em família no fim de semana. Laços humanos também são parte do código de vida.</p>
+            </div>
+            
+            <div class="card-curiosidade cinza">
+                <div class="icone-curiosidade">🔬</div>
+                <h3>Cientista Curioso</h3>
+                <p>Interesse profundo em inteligência artificial — explorar redes neurais é como desvendar uma nova linguagem da natureza.</p>
+            </div>
+            
+            <div class="card-curiosidade roxo">
+                <div class="icone-curiosidade">⚡</div>
+                <h3>Maker & Hardware</h3>
+                <p>Projetos com Arduino e microcontroladores são uma paixão paralela — quando o código faz algo físico acontecer, a magia é real.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- O Script manipula a DOM e altera as classes destas seções -->
+    <script src="script.js"></script>
+</body>
+</html>
