@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Falhas intencionais: Ausência de meta charset, viewport e description -->
+<title>pagina</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Topo Não Semântico -->
+<div class="topo">
+  <div class="nome-site">Meu Blog Pessoal</div>
+  <div class="links-menu">
+    <div class="link-item" onclick="alert('Indo para Início')">Início</div>
+    <div class="link-item" onclick="alert('Indo para Trajetória')">Trajetória</div>
+    <div class="link-item" onclick="alert('Indo para Curiosidades')">Curiosidades</div>
+  </div>
+</div>
+<div class="banner-versao2">
+  <p> Quer ver esta página refatorada com HTML5 Semântico e 100% no Lighthouse?</p>
+  <a href="../Semântico/index.html" class="btn-ir-versao2">Ver Versão Melhorada (V2)</a>
+</div>
+<div class="corpo-pagina">
+  <!-- Bloco de Conteúdo Principal -->
+  <div class="conteudo-principal">
+    <div class="post-perfil">
+      <div class="titulo-post">Olá, eu sou o Yan!</div>
+      <div class="subtitulo-autor">Publicado em 05/09/2026 por Yan</div>
+      <div class="bloco-foto">
+       
+        <img src="src/Yan.jpg" alt="Foto de Yan" class="foto-perfil">
+      </div>
+      <div class="secao-texto">
+        <div class="titulo-secao">Minha Trajetória Acadêmica e Profissional</div>
+        <div class="texto">
+          Sou estudante de Ciência da Computação gosto de tectologia e programação. Atualmente estou cursando o 7º semestre da faculdade e tenho um pouco de experiência em relação a desenvolvimento web, principalmente em HTML, CSS e JavaScript. Estou sempre buscando aprender novas tecnologias e aprimorar minhas habilidades na área de desenvolvimento de software.
+          Também estudo sobre robótica e estou parcitipando de um projeto de robótica na faculdade, onde estou aprendendo sobre programação de microcontroladores e integração de sensores. Além disso, tenho interesse em inteligência artificial e estou explorando conceitos de aprendizado de máquina e redes neurais. 
+      </div>
+      <!-- Elemento de interação inacessível (sem tag button, sem foco por teclado) -->
+      <div class="botao-interativo" id="btn-mensagem">
+        Clique para saber mais
+      </div>
+      <div id="mensagem-secreta" style="display:none; margin-top:15px; color:#aaa;">
+        "O segredo da web moderna é a constante evolução!"
+      </div>
+    </div>
+    <div class="secao-texto">
+      <div class="titulo-secao">Curiosidades sobre Mim</div>
+      <div class="texto">
+        • Apaixonado por videogames retrô e modernos.<br>
+        • Sou jogador de RPG de mesa.<br>
+        • Meu jogo favorito é Dark Souls 3.<br>
+        • Adoro a tecnologia.<br>
+        • Não recuso um bom churrasco em família no fim de semana.<br>
+        • Gosto de ficar em casa.<br>
+        
+      </div>
+    </div>
+  </div>
+  <!-- Barra Lateral -->
+  <div class="barra-lateral">
+    <div class="titulo-lateral">Artigos Recomendados</div>
+    <div class="item-lateral">Como organizar o CSS do seu projeto</div>
+    <div class="item-lateral">A tríade da Web: HTML, CSS e JS</div>
+  </div>
+</div>
+<!-- Rodapé -->
+<div class="rodape">
+  <div>Copyright 2026 - Todos os direitos reservados.</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
